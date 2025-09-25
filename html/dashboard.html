@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema de Prestaciones</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <h1>Sistema de Prestaciones</h1>
+            <div class="user-info">
+                <span>Bienvenido, Usuario</span>
+                <button id="logoutBtn">Cerrar Sesión</button>
+            </div>
+        </header>
+        
+        <div class="overlay" id="overlay"></div>
+        
+        <div class="main-content">
+            <nav class="sidebar" id="sidebar">
+                <ul class="menu">
+                    <li><a href="#" data-section="exenciones">Exenciones</a></li>
+                    <li><a href="#" data-section="vigencia">Vigencia del servicio médico</a></li>
+                    <li><a href="#" data-section="becas">Becas</a></li>
+                    <li class="has-submenu">
+                        <a href="#" data-section="reembolsos">Reembolsos</a>
+                        <ul class="submenu">
+                            <li><a href="#" data-section="reembolso-inscripciones">Reembolso de inscripciones</a></li>
+                            <li><a href="#" data-section="reembolso-libros">Reembolso de libros</a></li>
+                            <li><a href="#" data-section="reembolso-tesis">Reembolso de impresión de tesis</a></li>
+                            <li><a href="#" data-section="reembolso-chofer">Reembolso de licencia de chofer</a></li>
+                            <li><a href="#" data-section="reembolso-posgrado">Reembolso de inscripción de posgrado</a></li>
+                            <li><a href="#" data-section="reembolso-beca">Reembolso de Beca Especial</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <main class="content">
+                <div id="exenciones" class="section active">
+                    <h2>Exenciones</h2>
+                    <button class="btn-nuevo">Nueva Exención</button>
+                    <div class="solicitudes-list">
+                        <h3>Solicitudes Previas</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>EX-001</td>
+                                    <td>15/03/2023</td>
+                                    <td>Aprobado</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>EX-002</td>
+                                    <td>20/05/2023</td>
+                                    <td>Rechazado</td>
+                                    <td>
+                                        <button class="btn-editar">Editar</button>
+                                        <button class="btn-eliminar">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="vigencia" class="section">
+                    <h2>Vigencia del Servicio Médico</h2>
+                    <button class="btn-nuevo">Nueva Solicitud</button>
+                    <div class="solicitudes-list">
+                        <h3>Solicitudes Previas</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>VM-001</td>
+                                    <td>10/02/2023</td>
+                                    <td>Aprobado</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="becas" class="section">
+                    <h2>Becas</h2>
+                    <button class="btn-nuevo">Nueva Solicitud de Beca</button>
+                    <div class="solicitudes-list">
+                        <h3>Solicitudes Previas</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>BE-001</td>
+                                    <td>05/01/2023</td>
+                                    <td>Rechazado</td>
+                                    <td>
+                                        <button class="btn-editar">Editar</button>
+                                        <button class="btn-eliminar">Eliminar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>BE-002</td>
+                                    <td>15/08/2023</td>
+                                    <td>En revisión</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Secciones de reembolsos (similares a las anteriores) -->
+                <div id="reembolso-inscripciones" class="section">
+                    <h2>Reembolso de Inscripciones</h2>
+                    <button class="btn-nuevo">Nuevo Reembolso</button>
+                    <div class="solicitudes-list">
+                        <h3>Solicitudes Previas</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RI-001</td>
+                                    <td>12/04/2023</td>
+                                    <td>Aprobado</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Resto de secciones de reembolsos (similares) -->
+                <!-- Agregar estas secciones adicionales al contenido principal -->
+            <div id="reembolso-libros" class="section">
+                <h2>Reembolso de Libros</h2>
+                <button class="btn-nuevo">Nuevo Reembolso</button>
+                <div class="solicitudes-list">
+                    <h3>Solicitudes Previas</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RL-001</td>
+                                <td>22/06/2023</td>
+                                <td>En revisión</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="reembolso-tesis" class="section">
+                <h2>Reembolso de Impresión de Tesis</h2>
+                <button class="btn-nuevo">Nuevo Reembolso</button>
+                <div class="solicitudes-list">
+                    <h3>Solicitudes Previas</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RT-001</td>
+                                <td>10/09/2023</td>
+                                <td>Rechazado</td>
+                                <td>
+                                    <button class="btn-editar">Editar</button>
+                                    <button class="btn-eliminar">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="reembolso-chofer" class="section">
+                <h2>Reembolso de Licencia de Conducir</h2>
+                <button class="btn-nuevo">Nuevo Reembolso</button>
+                <div class="solicitudes-list">
+                    <h3>Solicitudes Previas</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RC-001</td>
+                                <td>05/11/2023</td>
+                                <td>Aprobado</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="reembolso-posgrado" class="section">
+                <h2>Reembolso de Inscripción a Posgrado</h2>
+                <button class="btn-nuevo">Nuevo Reembolso</button>
+                <div class="solicitudes-list">
+                    <h3>Solicitudes Previas</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RP-001</td>
+                                <td>15/01/2024</td>
+                                <td>En revisión</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="reembolso-beca" class="section">
+                <h2>Reembolso de Beca Especial</h2>
+                <button class="btn-nuevo">Nuevo Reembolso</button>
+                <div class="solicitudes-list">
+                    <h3>Solicitudes Previas</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RB-001</td>
+                                <td>20/02/2024</td>
+                                <td>Aprobado</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            </main>
+        </div>
+    </div>
+    
+    <!-- Modal para nueva solicitud -->
+    <div id="modalNuevaSolicitud" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody">
+                <!-- Contenido dinámico según la sección -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
