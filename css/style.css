@@ -436,3 +436,172 @@ input[type="date"] {
         padding: 8px;
     }
 }
+
+/* Estilos para la sección de Nómina CFDI */
+.search-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.search-container h3 {
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.search-form {
+    margin-top: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.cfdi-list {
+    margin-top: 20px;
+}
+
+.cfdi-list h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+#tablaCFDI {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 600px;
+}
+
+#tablaCFDI th, #tablaCFDI td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#tablaCFDI th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+#tablaCFDI tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tablaCFDI tr:hover {
+    background-color: #f0f0f0;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-download {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-download.pdf {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-download.pdf:hover {
+    background-color: #c0392b;
+}
+
+.btn-download.xml {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-download.xml:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos para mensajes de estado */
+.no-results {
+    text-align: center;
+    padding: 20px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Estilos responsivos para la sección CFDI */
+@media (max-width: 768px) {
+    .search-container {
+        padding: 15px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-row .form-group {
+        min-width: 100%;
+    }
+    
+    .acciones {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .btn-download {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #tablaCFDI {
+        font-size: 0.9rem;
+    }
+    
+    #tablaCFDI th, #tablaCFDI td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container {
+        padding: 10px;
+    }
+    
+    #tablaCFDI {
+        font-size: 0.8rem;
+    }
+    
+    #tablaCFDI th, #tablaCFDI td {
+        padding: 6px;
+    }
+    
+    .btn-download {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+}
