@@ -1,9 +1,95 @@
+function inicializarModuloCFDI() {
+    const formBusquedaCFDI = document.getElementById('formBusquedaCFDI');
+    const btnLimpiar = document.getElementById('btnLimpiar');
+    const tablaCFDI = document.getElementById('tablaCFDI');
+    const filasCFDI = tablaCFDI.querySelectorAll('tbody tr');
+    
+    // Manejar el envío del formulario de búsqueda
+    if (formBusquedaCFDI) {
+        formBusquedaCFDI.addEventListener('submit', function(e) {
+            e.preventDefault();
+            buscarCFDI();
+        });
+    }
+    
+    // Manejar el botón limpiar
+    if (btnLimpiar) {
+        btnLimpiar.addEventListener('click', function() {
+            limpiarBusquedaCFDI();
+        });
+    }
+    
+    // Manejar la descarga de archivos
+    const botonesDescarga = document.querySelectorAll('.btn-download');
+    botonesDescarga.forEach(boton => {
+        boton.addEventListener('click', function() {
+            const archivo = this.getAttribute('data-file');
+            const tipo = this.classList.contains('pdf') ? 'PDF' : 'XML';
+            descargarArchivo(archivo, tipo);
+        });
+    });
+    
+    // Función para buscar CFDI
+    function buscarCFDI() {
+        const anio = document.getElementById('anio').value;
+        const quincena = document.getElementById('quincena').value;
+        const fechaInicio = document.getElementById('fechaInicio').value;
+        const fechaFin = document.getElementById('fechaFin').value;
+        
+        // Mostrar mensaje de búsqueda (simulado)
+        alert(`Búsqueda realizada con los siguientes criterios:\nAño: ${anio || 'No especificado'}\nQuincena: ${quincena || 'No especificada'}\nFecha inicio: ${fechaInicio || 'No especificada'}\nFecha fin: ${fechaFin || 'No especificada'}`);
+        
+        // En un sistema real, aquí se haría una petición al servidor
+        // Por ahora, solo simulamos que se muestran todos los resultados
+        mostrarResultadosCFDI(filasCFDI);
+    }
+    
+    // Función para limpiar la búsqueda
+    function limpiarBusquedaCFDI() {
+        document.getElementById('formBusquedaCFDI').reset();
+        mostrarResultadosCFDI(filasCFDI);
+    }
+    
+    // Función para mostrar resultados
+    function mostrarResultadosCFDI(filas) {
+        const tbody = tablaCFDI.querySelector('tbody');
+        tbody.innerHTML = '';
+        
+        if (filas.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4" class="no-results">No se encontraron resultados</td></tr>';
+        } else {
+            filas.forEach(fila => {
+                tbody.appendChild(fila.cloneNode(true));
+            });
+            
+            // Reasignar eventos a los nuevos botones de descarga
+            const nuevosBotones = tbody.querySelectorAll('.btn-download');
+            nuevosBotones.forEach(boton => {
+                boton.addEventListener('click', function() {
+                    const archivo = this.getAttribute('data-file');
+                    const tipo = this.classList.contains('pdf') ? 'PDF' : 'XML';
+                    descargarArchivo(archivo, tipo);
+                });
+            });
+        }
+    }
+    
+    // Función para simular la descarga de archivos
+    function descargarArchivo(nombreArchivo, tipo) {
+        alert(`Descargando archivo ${tipo}: ${nombreArchivo}\n\nEn un sistema real, se descargaría el archivo.`);
+        // En un sistema real, aquí iría la lógica para descargar el archivo
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Elementos del DOM para funcionalidad responsiva
     const menuToggle = document.getElementById('menuToggle');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
-    
+
+    // Inicializar módulo CFDI
+    inicializarModuloCFDI();
+
     // Función para abrir/cerrar el menú en móviles
     function toggleMenu() {
         sidebar.classList.toggle('active');
@@ -570,3 +656,4 @@ function mostrarFormularioNuevo(sectionId) {
         }
     });
 });
+
