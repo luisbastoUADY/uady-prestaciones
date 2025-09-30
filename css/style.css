@@ -478,6 +478,33 @@ input[type="date"] {
     color: #333;
 }
 
+.far-list {
+    margin-top: 20px;
+}
+
+.far-list h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.fondoAhorro-list {
+    margin-top: 20px;
+}
+
+.fondoAhorro-list h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.fondoVivienda-list {
+    margin-top: 20px;
+}
+
+.fondoVivienda-list h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
 .table-container {
     overflow-x: auto;
 }
@@ -506,6 +533,87 @@ input[type="date"] {
 }
 
 #tablaCFDI tr:hover {
+    background-color: #f0f0f0;
+}
+
+#tablaFAR {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 600px;
+}
+
+#tablaFAR th, #tablaFAR td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#tablaFAR th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+#tablaFAR tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tablaFAR tr:hover {
+    background-color: #f0f0f0;
+}
+
+#tablaFondoAhorro {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 600px;
+}
+
+#tablaFondoAhorro th, #tablaFondoAhorro td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#tablaFondoAhorro th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+#tablaFondoAhorro tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tablaFondoAhorro tr:hover {
+    background-color: #f0f0f0;
+}
+
+#tablaFondoVivienda {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 600px;
+}
+
+#tablaFondoVivienda th, #tablaFondoVivienda td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#tablaFondoVivienda th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+#tablaFondoVivienda tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tablaFondoVivienda tr:hover {
     background-color: #f0f0f0;
 }
 
@@ -553,7 +661,7 @@ input[type="date"] {
     font-style: italic;
 }
 
-/* Estilos responsivos para la sección CFDI */
+/* Estilos responsivos para la sección CFDI, FAR y caja de ahorro */
 @media (max-width: 768px) {
     .search-container {
         padding: 15px;
@@ -581,11 +689,35 @@ input[type="date"] {
     #tablaCFDI {
         font-size: 0.9rem;
     }
-    
+
     #tablaCFDI th, #tablaCFDI td {
         padding: 8px;
     }
-}
+
+    #tablaFAR {
+        font-size: 0.9rem;
+    }
+
+    #tablaFAR th, #tablaFAR td {
+        padding: 8px;
+    }
+
+    #tablaFondoAhorro {
+        font-size: 0.9rem;
+    }
+
+    #tablaFondoAhorro th, #tablaFondoAhorro td {
+        padding: 8px;
+    }
+
+    #tablaFondoVivienda {
+        font-size: 0.9rem;
+    }
+
+    #tablaFondoVivienda th, #tablaFondoVivienda td {
+        padding: 8px;
+    }
+
 
 @media (max-width: 480px) {
     .search-container {
@@ -599,7 +731,31 @@ input[type="date"] {
     #tablaCFDI th, #tablaCFDI td {
         padding: 6px;
     }
-    
+
+    #tablaFAR {
+        font-size: 0.8rem;
+    }
+
+    #tablaFAR th, #tablaFAR td {
+        padding: 6px;
+    }
+
+    #tablaFondoAhorro {
+        font-size: 0.8rem;
+    }
+
+    #tablaFondoAhorro th, #tablaFondoAhorro td {
+        padding: 6px;
+    }
+
+    #tablaFondoVivienda {
+        font-size: 0.8rem;
+    }
+
+    #tablaFondoVivienda th, #tablaFondoVivienda td {
+        padding: 6px;   
+    }
+
     .btn-download {
         padding: 6px 8px;
         font-size: 0.8rem;

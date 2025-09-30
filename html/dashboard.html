@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Sistema de Prestaciones</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="dashboard-container">
         <header class="header">
@@ -16,9 +18,9 @@
                 <button id="logoutBtn">Cerrar Sesión</button>
             </div>
         </header>
-        
+
         <div class="overlay" id="overlay"></div>
-        
+
         <div class="main-content">
             <nav class="sidebar" id="sidebar">
                 <ul class="menu">
@@ -38,6 +40,12 @@
                     </li>
                     <!-- Nueva opción de menú para Nómina CFDI -->
                     <li><a href="#" data-section="nomina-cfdi">Nómina CFDI</a></li>
+                    <!-- Nueva opción de menú para Fondo de Ahorro para el retito -->
+                    <li><a href="#" data-section="far">Fondo de Ahorro para el Retiro</a></li>
+                    <!-- Nueva opción de menú para Fondo de Ahorro -->
+                    <li><a href="#" data-section="fondoAhorro">Fondo de Ahorro</a></li>
+                    <!-- Nueva opción de menú para Fondo de Vivienda -->
+                    <li><a href="#" data-section="fondoVivienda">Fondo de Vivienda</a></li>
                 </ul>
             </nav>
 
@@ -76,7 +84,7 @@
                         </table>
                     </div>
                 </div>
-                
+
                 <div id="vigencia" class="section">
                     <h2>Vigencia del Servicio Médico</h2>
                     <button class="btn-nuevo">Nueva Solicitud</button>
@@ -102,7 +110,7 @@
                         </table>
                     </div>
                 </div>
-                
+
                 <div id="becas" class="section">
                     <h2>Becas</h2>
                     <button class="btn-nuevo">Nueva Solicitud de Beca</button>
@@ -137,7 +145,7 @@
                         </table>
                     </div>
                 </div>
-                
+
                 <!-- Secciones de reembolsos (similares a las anteriores) -->
                 <div id="reembolso-inscripciones" class="section">
                     <h2>Inscripciones</h2>
@@ -164,146 +172,146 @@
                         </table>
                     </div>
                 </div>
-                
+
                 <!-- Resto de secciones de reembolsos (similares) -->
                 <!-- Agregar estas secciones adicionales al contenido principal -->
-            <div id="reembolso-libros" class="section">
-                <h2>Libros</h2>
-                <button class="btn-nuevo">Nuevo Reembolso</button>
-                <div class="solicitudes-list">
-                    <h3>Solicitudes Previas</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Fecha</th>
-                                <th>Estado</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>RL-001</td>
-                                <td>22/06/2023</td>
-                                <td>En revisión</td>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div id="reembolso-libros" class="section">
+                    <h2>Libros</h2>
+                    <button class="btn-nuevo">Nuevo Reembolso</button>
+                    <div class="solicitudes-list">
+                        <h3>Solicitudes Previas</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RL-001</td>
+                                    <td>22/06/2023</td>
+                                    <td>En revisión</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <div id="reembolso-tesis" class="section">
-                <h2>Reembolso de Impresión de Tesis</h2>
-                <button class="btn-nuevo">Nuevo Reembolso</button>
-                <div class="solicitudes-list">
-                    <h3>Solicitudes Previas</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Fecha</th>
-                                <th>Estado</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>RT-001</td>
-                                <td>10/09/2023</td>
-                                <td>Rechazado</td>
-                                <td>
-                                    <button class="btn-editar">Editar</button>
-                                    <button class="btn-eliminar">Eliminar</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div id="reembolso-tesis" class="section">
+                    <h2>Reembolso de Impresión de Tesis</h2>
+                    <button class="btn-nuevo">Nuevo Reembolso</button>
+                    <div class="solicitudes-list">
+                        <h3>Solicitudes Previas</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RT-001</td>
+                                    <td>10/09/2023</td>
+                                    <td>Rechazado</td>
+                                    <td>
+                                        <button class="btn-editar">Editar</button>
+                                        <button class="btn-eliminar">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <div id="reembolso-chofer" class="section">
-                <h2>Reembolso de Licencia de Conducir</h2>
-                <button class="btn-nuevo">Nuevo Reembolso</button>
-                <div class="solicitudes-list">
-                    <h3>Solicitudes Previas</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Fecha</th>
-                                <th>Estado</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>RC-001</td>
-                                <td>05/11/2023</td>
-                                <td>Aprobado</td>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div id="reembolso-chofer" class="section">
+                    <h2>Reembolso de Licencia de Conducir</h2>
+                    <button class="btn-nuevo">Nuevo Reembolso</button>
+                    <div class="solicitudes-list">
+                        <h3>Solicitudes Previas</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RC-001</td>
+                                    <td>05/11/2023</td>
+                                    <td>Aprobado</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <div id="reembolso-posgrado" class="section">
-                <h2>Reembolso de Inscripción a Posgrado</h2>
-                <button class="btn-nuevo">Nuevo Reembolso</button>
-                <div class="solicitudes-list">
-                    <h3>Solicitudes Previas</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Fecha</th>
-                                <th>Estado</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>RP-001</td>
-                                <td>15/01/2024</td>
-                                <td>En revisión</td>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div id="reembolso-posgrado" class="section">
+                    <h2>Reembolso de Inscripción a Posgrado</h2>
+                    <button class="btn-nuevo">Nuevo Reembolso</button>
+                    <div class="solicitudes-list">
+                        <h3>Solicitudes Previas</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RP-001</td>
+                                    <td>15/01/2024</td>
+                                    <td>En revisión</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <div id="reembolso-beca" class="section">
-                <h2>Reembolso de Beca Especial</h2>
-                <button class="btn-nuevo">Nuevo Reembolso</button>
-                <div class="solicitudes-list">
-                    <h3>Solicitudes Previas</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Fecha</th>
-                                <th>Estado</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>RB-001</td>
-                                <td>20/02/2024</td>
-                                <td>Aprobado</td>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div id="reembolso-beca" class="section">
+                    <h2>Reembolso de Beca Especial</h2>
+                    <button class="btn-nuevo">Nuevo Reembolso</button>
+                    <div class="solicitudes-list">
+                        <h3>Solicitudes Previas</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RB-001</td>
+                                    <td>20/02/2024</td>
+                                    <td>Aprobado</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-<!-- Nueva sección para Nómina CFDI -->
+                <!-- Nueva sección para Nómina CFDI -->
                 <div id="nomina-cfdi" class="section">
                     <h2>Nómina CFDI</h2>
-                    
+
                     <!-- Formulario de búsqueda -->
                     <div class="search-container">
                         <h3>Búsqueda de Comprobantes</h3>
@@ -311,7 +319,7 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="anio">Año:</label>
-                                    <select id="anio">
+                                    <select id="anio-cfdi">
                                         <option value="">Seleccione un año</option>
                                         <option value="2024">2024</option>
                                         <option value="2023">2023</option>
@@ -362,8 +370,8 @@
                             <button type="button" id="btnLimpiar" class="btn-cancel">Limpiar</button>
                         </form>
                     </div>
-                    
-                    <!-- Tabla de resultados -->
+
+                    <!-- Tabla de resultados CFDI-->
                     <div class="cfdi-list">
                         <h3>Comprobantes Fiscales Digitales</h3>
                         <div class="table-container">
@@ -382,8 +390,10 @@
                                         <td>15/01/2024</td>
                                         <td>$12,450.00</td>
                                         <td class="acciones">
-                                            <button class="btn-download pdf" data-file="cfdi-2024-001.pdf" title="Descargar PDF">📄 PDF</button>
-                                            <button class="btn-download xml" data-file="cfdi-2024-001.xml" title="Descargar XML">📋 XML</button>
+                                            <button class="btn-download pdf" data-file="cfdi-2024-001.pdf"
+                                                title="Descargar PDF">📄 PDF</button>
+                                            <button class="btn-download xml" data-file="cfdi-2024-001.xml"
+                                                title="Descargar XML">📋 XML</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -391,8 +401,10 @@
                                         <td>30/01/2024</td>
                                         <td>$12,450.00</td>
                                         <td class="acciones">
-                                            <button class="btn-download pdf" data-file="cfdi-2024-002.pdf" title="Descargar PDF">📄 PDF</button>
-                                            <button class="btn-download xml" data-file="cfdi-2024-002.xml" title="Descargar XML">📋 XML</button>
+                                            <button class="btn-download pdf" data-file="cfdi-2024-002.pdf"
+                                                title="Descargar PDF">📄 PDF</button>
+                                            <button class="btn-download xml" data-file="cfdi-2024-002.xml"
+                                                title="Descargar XML">📋 XML</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -400,8 +412,10 @@
                                         <td>15/02/2024</td>
                                         <td>$13,200.00</td>
                                         <td class="acciones">
-                                            <button class="btn-download pdf" data-file="cfdi-2024-003.pdf" title="Descargar PDF">📄 PDF</button>
-                                            <button class="btn-download xml" data-file="cfdi-2024-003.xml" title="Descargar XML">📋 XML</button>
+                                            <button class="btn-download pdf" data-file="cfdi-2024-003.pdf"
+                                                title="Descargar PDF">📄 PDF</button>
+                                            <button class="btn-download xml" data-file="cfdi-2024-003.xml"
+                                                title="Descargar XML">📋 XML</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -409,8 +423,197 @@
                                         <td>15/12/2023</td>
                                         <td>$11,800.00</td>
                                         <td class="acciones">
-                                            <button class="btn-download pdf" data-file="cfdi-2023-024.pdf" title="Descargar PDF">📄 PDF</button>
-                                            <button class="btn-download xml" data-file="cfdi-2023-024.xml" title="Descargar XML">📋 XML</button>
+                                            <button class="btn-download pdf" data-file="cfdi-2023-024.pdf"
+                                                title="Descargar PDF">📄 PDF</button>
+                                            <button class="btn-download xml" data-file="cfdi-2023-024.xml"
+                                                title="Descargar XML">📋 XML</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nueva sección para fondo de ahorro para el retiro -->
+                <div id="far" class="section">
+                    <h2>Fondo de Ahorro para el Retiro</h2>
+
+                    <!-- Formulario de búsqueda -->
+                    <div class="search-container">
+                        <h3>Búsqueda de Comprobantes</h3>
+                        <form id="formBusquedaFAR" class="search-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="anio">Año:</label>
+                                    <select id="anio-far">
+                                        <option value="">Seleccione un año</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-submit">Buscar</button>
+                        </form>
+                    </div>
+
+                    <!-- Tabla de resultados CFDI-->
+                    <div class="far-list">
+                        <h3>Comprobantes Fiscales Digitales</h3>
+                        <div class="table-container">
+                            <table id="tablaFAR">
+                                <thead>
+                                    <tr>
+                                        <th>Folio</th>
+                                        <th>Fecha</th>
+                                        <th>Neto</th>
+                                        <th>Descargas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>FAR-2024-001</td>
+                                        <td>15/01/2024</td>
+                                        <td>$12,450.00</td>
+                                        <td class="acciones">
+                                            <button class="btn-download pdf" data-file="far-2024-001.pdf"
+                                                title="Descargar PDF">📄 PDF</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>FAR-2024-002</td>
+                                        <td>15/06/2024</td>
+                                        <td>$12,450.00</td>
+                                        <td class="acciones">
+                                            <button class="btn-download pdf" data-file="far-2024-002.pdf"
+                                                title="Descargar PDF">📄 PDF</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nueva sección para fondo de ahorro -->
+                <div id="fondoAhorro" class="section">
+                    <h2>Fondo de Ahorro</h2>
+
+                    <!-- Formulario de búsqueda -->
+                    <div class="search-container">
+                        <h3>Búsqueda de Comprobantes</h3>
+                        <form id="formBusquedaFondoAhorro" class="search-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="anio">Año:</label>
+                                    <select id="anio-fondoAhorro">
+                                        <option value="">Seleccione un año</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-submit">Buscar</button>
+                        </form>
+                    </div>
+
+                    <!-- Tabla de resultados CFDI-->
+                    <div class="fondoAhorro-list">
+                        <h3>Comprobantes Fiscales Digitales</h3>
+                        <div class="table-container">
+                            <table id="tablaFondoAhorro">
+                                <thead>
+                                    <tr>
+                                        <th>Folio</th>
+                                        <th>Fecha</th>
+                                        <th>Neto</th>
+                                        <th>Descargas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ahorro-2024-001</td>
+                                        <td>15/01/2024</td>
+                                        <td>$12,450.00</td>
+                                        <td class="acciones">
+                                            <button class="btn-download pdf" data-file="ahorro-2024-001.pdf"
+                                                title="Descargar PDF">📄 PDF</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ahorro-2024-002</td>
+                                        <td>15/06/2024</td>
+                                        <td>$12,450.00</td>
+                                        <td class="acciones">
+                                            <button class="btn-download pdf" data-file="ahorro-2024-002.pdf"
+                                                title="Descargar PDF">📄 PDF</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Nueva sección para fondo de vivienda -->
+                <div id="fondoVivienda" class="section">
+                    <h2>Fondo de Vivienda</h2>
+
+                    <!-- Formulario de búsqueda -->
+                    <div class="search-container">
+                        <h3>Búsqueda de Comprobantes</h3>
+                        <form id="formBusquedaFondoVivienda" class="search-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="anio">Año:</label>
+                                    <select id="anio-vivienda">
+                                        <option value="">Seleccione un año</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-submit">Buscar</button>
+                        </form>
+                    </div>
+
+                    <!-- Tabla de resultados CFDI-->
+                    <div class="fondoVivienda-list">
+                        <h3>Comprobantes Fiscales Digitales</h3>
+                        <div class="table-container">
+                            <table id="tablaFondoVivienda">
+                                <thead>
+                                    <tr>
+                                        <th>Folio</th>
+                                        <th>Fecha</th>
+                                        <th>Neto</th>
+                                        <th>Descargas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>FV-2024-001</td>
+                                        <td>15/01/2024</td>
+                                        <td>$12,450.00</td>
+                                        <td class="acciones">
+                                            <button class="btn-download pdf" data-file="fv-2024-001.pdf"
+                                                title="Descargar PDF">📄 PDF</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>FV-2024-002</td>
+                                        <td>15/06/2024</td>
+                                        <td>$12,450.00</td>
+                                        <td class="acciones">
+                                            <button class="btn-download pdf" data-file="fv-2024-002.pdf"
+                                                title="Descargar PDF">📄 PDF</button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -422,7 +625,7 @@
             </main>
         </div>
     </div>
-    
+
     <!-- Modal para nueva solicitud -->
     <div id="modalNuevaSolicitud" class="modal">
         <div class="modal-content">
@@ -432,7 +635,8 @@
             </div>
         </div>
     </div>
-    
+
     <script src="../js/dashboard.js"></script>
 </body>
+
 </html>

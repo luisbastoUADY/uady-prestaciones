@@ -31,7 +31,7 @@ function inicializarModuloCFDI() {
     
     // Función para buscar CFDI
     function buscarCFDI() {
-        const anio = document.getElementById('anio').value;
+        const anio = document.getElementById('anio-cfdi').value;
         const quincena = document.getElementById('quincena').value;
         const fechaInicio = document.getElementById('fechaInicio').value;
         const fechaFin = document.getElementById('fechaFin').value;
@@ -73,7 +73,205 @@ function inicializarModuloCFDI() {
             });
         }
     }
+
+    // Función para simular la descarga de archivos
+    function descargarArchivo(nombreArchivo, tipo) {
+        alert(`Descargando archivo ${tipo}: ${nombreArchivo}\n\nEn un sistema real, se descargaría el archivo.`);
+        // En un sistema real, aquí iría la lógica para descargar el archivo
+    }
+}
+
+function inicializarModuloFAR() {
+    const formBusquedaFAR = document.getElementById('formBusquedaFAR');
+    const tablaFAR = document.getElementById('tablaFAR');
+    const filasFAR = tablaFAR.querySelectorAll('tbody tr');
+
+    // Manejar el envío del formulario de búsqueda
+    if (formBusquedaFAR) {
+        formBusquedaFAR.addEventListener('submit', function(e) {
+            e.preventDefault();
+            buscarFAR();
+        });
+    }
     
+    // Manejar la descarga de archivos
+    const botonesDescarga = document.querySelectorAll('.btn-download');
+    botonesDescarga.forEach(boton => {
+        boton.addEventListener('click', function() {
+            const archivo = this.getAttribute('data-file');
+            const tipo = this.classList.contains('pdf') ? 'PDF' : 'XML';
+            descargarArchivo(archivo, tipo);
+        });
+    });
+    
+    // Función para buscar FAR
+    function buscarFAR() {
+        const anio = document.getElementById('anio-far').value;
+        
+        // Mostrar mensaje de búsqueda (simulado)
+        alert(`Búsqueda realizada con los siguientes criterios:\nAño: ${anio || 'No especificado'}`);
+        
+        // En un sistema real, aquí se haría una petición al servidor
+        // Por ahora, solo simulamos que se muestran todos los resultados
+        mostrarResultadosFAR(filasFAR);
+    }
+    
+    // Función para mostrar resultados
+    function mostrarResultadosFAR(filas) {
+        const tbody = tablaFAR.querySelector('tbody');
+        tbody.innerHTML = '';
+        
+        if (filas.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4" class="no-results">No se encontraron resultados</td></tr>';
+        } else {
+            filas.forEach(fila => {
+                tbody.appendChild(fila.cloneNode(true));
+            });
+            
+            // Reasignar eventos a los nuevos botones de descarga
+            const nuevosBotones = tbody.querySelectorAll('.btn-download');
+            nuevosBotones.forEach(boton => {
+                boton.addEventListener('click', function() {
+                    const archivo = this.getAttribute('data-file');
+                    const tipo = this.classList.contains('pdf') ? 'PDF' : 'XML';
+                    descargarArchivo(archivo, tipo);
+                });
+            });
+        }
+    }
+
+    // Función para simular la descarga de archivos
+    function descargarArchivo(nombreArchivo, tipo) {
+        alert(`Descargando archivo ${tipo}: ${nombreArchivo}\n\nEn un sistema real, se descargaría el archivo.`);
+        // En un sistema real, aquí iría la lógica para descargar el archivo
+    }
+}
+
+function inicializarModuloFondoVivienda() {
+    const formBusquedaFondoVivienda = document.getElementById('formBusquedaFondoVivienda');
+    const tablaFondoVivienda = document.getElementById('tablaFondoVivienda');
+    const filasFondoVivienda = tablaFondoVivienda.querySelectorAll('tbody tr');
+
+    // Manejar el envío del formulario de búsqueda
+    if (formBusquedaFondoVivienda) {
+        formBusquedaFondoVivienda.addEventListener('submit', function(e) {
+            e.preventDefault();
+            buscarFondoVivienda();
+        });
+    }
+    
+    // Manejar la descarga de archivos
+    const botonesDescarga = document.querySelectorAll('.btn-download');
+    botonesDescarga.forEach(boton => {
+        boton.addEventListener('click', function() {
+            const archivo = this.getAttribute('data-file');
+            const tipo = this.classList.contains('pdf') ? 'PDF' : 'XML';
+            descargarArchivo(archivo, tipo);
+        });
+    });
+
+    // Función para buscar Fondo de Vivienda
+    function buscarFondoVivienda() {
+        const anio = document.getElementById('anio-vivienda').value;
+        
+        // Mostrar mensaje de búsqueda (simulado)
+        alert(`Búsqueda realizada con los siguientes criterios:\nAño: ${anio || 'No especificado'}`);
+        
+        // En un sistema real, aquí se haría una petición al servidor
+        // Por ahora, solo simulamos que se muestran todos los resultados
+        mostrarResultadosFondoVivienda(filasFondoVivienda);
+    }
+    
+    // Función para mostrar resultados
+    function mostrarResultadosFondoVivienda(filas) {
+        const tbody = tablaFondoVivienda.querySelector('tbody');
+        tbody.innerHTML = '';
+        
+        if (filas.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4" class="no-results">No se encontraron resultados</td></tr>';
+        } else {
+            filas.forEach(fila => {
+                tbody.appendChild(fila.cloneNode(true));
+            });
+            
+            // Reasignar eventos a los nuevos botones de descarga
+            const nuevosBotones = tbody.querySelectorAll('.btn-download');
+            nuevosBotones.forEach(boton => {
+                boton.addEventListener('click', function() {
+                    const archivo = this.getAttribute('data-file');
+                    const tipo = this.classList.contains('pdf') ? 'PDF' : 'XML';
+                    descargarArchivo(archivo, tipo);
+                });
+            });
+        }
+    }
+
+    // Función para simular la descarga de archivos
+    function descargarArchivo(nombreArchivo, tipo) {
+        alert(`Descargando archivo ${tipo}: ${nombreArchivo}\n\nEn un sistema real, se descargaría el archivo.`);
+        // En un sistema real, aquí iría la lógica para descargar el archivo
+    }
+}
+
+function inicializarModuloFondoAhorro() {
+    const formBusquedaFondoAhorro = document.getElementById('formBusquedaFondoAhorro');
+    const tablaFondoAhorro = document.getElementById('tablaFondoAhorro');
+    const filasFondoAhorro = tablaFondoAhorro.querySelectorAll('tbody tr');
+
+    // Manejar el envío del formulario de búsqueda
+    if (formBusquedaFondoAhorro) {
+        formBusquedaFondoAhorro.addEventListener('submit', function(e) {
+            e.preventDefault();
+            buscarFondoAhorro();
+        });
+    }
+    
+    // Manejar la descarga de archivos
+    const botonesDescarga = document.querySelectorAll('.btn-download');
+    botonesDescarga.forEach(boton => {
+        boton.addEventListener('click', function() {
+            const archivo = this.getAttribute('data-file');
+            const tipo = this.classList.contains('pdf') ? 'PDF' : 'XML';
+            descargarArchivo(archivo, tipo);
+        });
+    });
+    
+    // Función para buscar Fondo de Ahorro
+    function buscarFondoAhorro() {
+        const anio = document.getElementById('anio-fondoAhorro').value;
+        
+        // Mostrar mensaje de búsqueda (simulado)
+        alert(`Búsqueda realizada con los siguientes criterios:\nAño: ${anio || 'No especificado'}`);
+        
+        // En un sistema real, aquí se haría una petición al servidor
+        // Por ahora, solo simulamos que se muestran todos los resultados
+        mostrarResultadosFondoAhorro(filasFondoAhorro);
+    }
+    
+    // Función para mostrar resultados
+    function mostrarResultadosFondoAhorro(filas) {
+        const tbody = tablaFondoAhorro.querySelector('tbody');
+        tbody.innerHTML = '';
+        
+        if (filas.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4" class="no-results">No se encontraron resultados</td></tr>';
+        } else {
+            filas.forEach(fila => {
+                tbody.appendChild(fila.cloneNode(true));
+            });
+            
+            // Reasignar eventos a los nuevos botones de descarga
+            const nuevosBotones = tbody.querySelectorAll('.btn-download');
+            nuevosBotones.forEach(boton => {
+                boton.addEventListener('click', function() {
+                    const archivo = this.getAttribute('data-file');
+                    const tipo = this.classList.contains('pdf') ? 'PDF' : 'XML';
+                    descargarArchivo(archivo, tipo);
+                });
+            });
+        }
+    }
+
     // Función para simular la descarga de archivos
     function descargarArchivo(nombreArchivo, tipo) {
         alert(`Descargando archivo ${tipo}: ${nombreArchivo}\n\nEn un sistema real, se descargaría el archivo.`);
@@ -89,6 +287,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Inicializar módulo CFDI
     inicializarModuloCFDI();
+    // Inicializar módulo FAR        
+    inicializarModuloFAR();
+    // Inicializar módulo Fondo de Ahorro
+    inicializarModuloFondoAhorro();
+    // Inicializar módulo Fondo de Vivienda
+    inicializarModuloFondoVivienda();
 
     // Función para abrir/cerrar el menú en móviles
     function toggleMenu() {
